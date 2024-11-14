@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon {
+    color: white;
+}
+
+/*body {*/
+/*  font-family: 'Poppins', sans-serif;*/
+/*  background: linear-gradient(to right, #141e30, #243b55);*/
+/*  !*color: #fff;*!*/
+/*}*/
+/*a {*/
+/*  color: #00e0ff;*/
+/*  text-decoration: none;*/
+/*  transition: color 0.3s;*/
+/*}*/
+/*a:hover {*/
+/*  color: #ff99cc;*/
+/*}*/
+
+/*!* Пример цвета для класса border-primary *!*/
+/*:root {*/
+/*  --primary: #00e0ff; !* Цвет для градиента или основного цвета *!*/
+/*}*/
+
+/*.bg-primary {*/
+/*  background-color: var(--primary);*/
+/*}*/
+
+/*.border-primary {*/
+/*  border-color: var(--primary);*/
+/*}*/
+
+/*.projects-section {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  overflow: hidden;*/
+/*  background-color: #1a202c;*/
+/*}*/
+
+/*.project-item {*/
+/*  width: 300px;*/
+/*  min-height: 300px;*/
+/*  background-color: #2d3748;*/
+/*  color: #fff;*/
+/*  padding: 20px;*/
+/*  border-radius: 8px;*/
+/*  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);*/
+/*}*/
