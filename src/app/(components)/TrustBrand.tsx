@@ -6,7 +6,7 @@ import { SiNextdotjs, SiTypescript, SiJavascript, SiRedux, SiTailwindcss, SiMui 
 
 const TrustBrand = () => {
     return (
-        <section className='h-screen w-screen overflow-hidden bg-black'>
+        <section id="skills" className='container w-full mx-auto overflow-hidden bg-black'>
             <div className='mx-auto mt-32 w-screen max-w-2xl'>
                 <div className='text-center text-3xl text-white'>
                     <span className='text-indigo-200'>Основные навыки</span>

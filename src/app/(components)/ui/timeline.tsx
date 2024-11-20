@@ -39,15 +39,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
     return (
         <section
-            className="w-screen bg-black dark:bg-neutral-950 font-sans md:px-10 "
+            id="experience"
+            className="container w-full mx-auto bg-black dark:bg-neutral-950 font-sans md:px-10"
             ref={containerRef}
         >
-            <div className='mx-auto pt-32 pb-4 w-screen max-w-2xl relative z-10 text-center'>
+            <div className='mx-auto pt-32 pb-4 max-w-2xl relative z-10 text-center'>
                 <h1 className='2xl:text-6xl xl:text-5xl text-5xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter'>
                     Опыт работы
                 </h1>
             </div>
-            <div className='relative h-64 w-screen overflow-hidden '>
+            <div className='relative h-64 overflow-hidden '>
                 <div
                     className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-[#48b6ff] to-transparent h-[2px] w-2/4 mx-auto blur-sm"
                 />
@@ -84,9 +85,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         </div>
 
                         <div className="relative pl-20 pr-4 md:pl-4 w-full">
-                            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-[#edeffd] to-[#7b9cda] transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
+                            <div className="absolute inset-0 h-full w-full transform scale-[0.95] rounded-full blur-2xl"></div>
                             <div
-                                className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+                                className="relative shadow-xl border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
                                 {item.name}
                                 {item.description}
                                 {item.steck}
