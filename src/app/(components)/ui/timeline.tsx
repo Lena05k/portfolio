@@ -11,9 +11,9 @@ import {AnimatedModalDemo} from "@/app/(components)/AnimatedModalDemo";
 
 interface TimelineEntry {
     title: string;
-    name: string;
-    steck: string;
-    description: string;
+    name: React.ReactNode;
+    steck: React.ReactNode;
+    description?: React.ReactNode;
     content: React.ReactNode;
 }
 

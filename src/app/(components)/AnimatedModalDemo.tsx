@@ -11,8 +11,8 @@ import { CloseIcon } from "./ui/animated-modal"
 
 interface Item {
     title: string;
-    content: string;
-    name: string;
+    content: React.ReactNode;
+    name: React.ReactNode;
 }
 
 interface AnimatedModalDemoProps {
