@@ -43,12 +43,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="container w-full mx-auto bg-black dark:bg-neutral-950 font-sans md:px-10"
             ref={containerRef}
         >
-            <div className='mx-auto pt-32 pb-4 max-w-2xl relative z-10 text-center'>
+            <div className='mx-auto pb-4 max-w-2xl relative z-10 text-center'>
                 <h1 className='2xl:text-6xl xl:text-5xl text-5xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter'>
                     Опыт работы
                 </h1>
             </div>
-            <div className='relative h-64 overflow-hidden '>
+            <div className='relative h-40 overflow-hidden '>
                 <div
                     className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-[#48b6ff] to-transparent h-[2px] w-2/4 mx-auto blur-sm"
                 />
@@ -63,14 +63,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     density={1200}
                     mousemove={true}
                     color='#48b6ff'
-                    className='absolute inset-x-0 -mt-24 top-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_55%)]'
+                    className='absolute inset-x-0 -mt-12 top-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_55%)]'
                 />
             </div>
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
                 {data.map((item, index) => (
                     <div
                         key={index}
-                        className="flex justify-start pt-10 md:pt-40 md:gap-10"
+                        className={`flex justify-start ${index === 0 ? '' : 'pt-10 md:pt-40'} md:gap-10`}
                     >
                         <div
                             className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
