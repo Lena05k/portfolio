@@ -40,11 +40,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     return (
         <section
             id="experience"
-            className="container w-full mx-auto bg-black dark:bg-neutral-950 font-sans md:px-10"
+            className="container w-full mx-auto mt-4 bg-black dark:bg-neutral-950 font-sans md:px-10"
             ref={containerRef}
         >
             <div className='mx-auto pb-4 max-w-2xl relative z-10 text-center'>
-                <h1 className='2xl:text-6xl xl:text-5xl text-5xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter'>
+                <h1 className='text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter'>
                     Опыт работы
                 </h1>
             </div>
@@ -79,7 +79,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                                 <div
                                     className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2"/>
                             </div>
-                            <h3 className="hidden md:block text-base md:pl-20 md:text-2xl font-bold text-neutral-500 dark:text-neutral-500 ">
+                            <h3 className="hidden sm:w-1/4 sm:text-left sm:mb-0 md:block text-base md:pl-20 md:text-2xl font-bold text-neutral-500 dark:text-neutral-500 ">
                                 {item.title}
                             </h3>
                         </div>
@@ -87,7 +87,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         <div className="relative pl-20 pr-4 md:pl-4 w-full">
                             <div className="absolute inset-0 h-full w-full transform scale-[0.95] rounded-full blur-2xl"></div>
                             <div
-                                className="relative shadow-xl border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+                                className="relative sm:w-3/4 shadow-xl border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
                                 {item.name}
                                 {item.description}
                                 {item.steck}

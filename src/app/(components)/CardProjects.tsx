@@ -3,7 +3,7 @@ import { LinkPreview } from "./ui/link-preview";
 
 export const CardProjectso = () => {
     return (
-        <section id="projects" className='container w-full mx-auto relative md:px-10 h-[44vh] overflow-hidden rounded-2xl'>
+        <section id="projects" className='container w-full mx-auto relative md:px-10 overflow-hidden rounded-2xl'>
             <HoverEffect items={projects} />
         </section>
     );
