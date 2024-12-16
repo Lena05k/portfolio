@@ -3,7 +3,7 @@ import { LinkPreview } from "./ui/link-preview";
 
 export const CardProjectso = () => {
     return (
-        <section id="projects" className='container w-full mx-auto relative md:px-10 overflow-hidden rounded-2xl'>
+        <section id="projects" className='visible w-full relative rounded-2xl'>
             <HoverEffect items={projects} />
         </section>
     );
@@ -11,7 +11,17 @@ export const CardProjectso = () => {
 export const projects = [
     {
         title: (
-            <LinkPreview url="https://github.com/Lena05k/frontend-project-12" className="text-zinc-100">
+            <LinkPreview url="#">
+                TMS (Test Management System)
+            </LinkPreview>
+        ),
+        description:
+            "Система  для планирования, управления, мониторинга, анализа и ревью тестирования ПО. Позволяет создавать и хранить тест-кейсы, отслеживать их выполнение, фиксировать дефекты и генерировать отчёты. Основные преимущества — автоматизация рутинных задач, повышение качества продукта и улучшение командного взаимодействия. Интегрируется с системами CI/CD и баг-трекерами для единого рабочего процесса.",
+        link: "https://github.com/Lena05k/frontend-project-12",
+    },
+    {
+        title: (
+            <LinkPreview url="https://github.com/Lena05k/frontend-project-12">
                 Slack chat Demo
             </LinkPreview>
         ),
@@ -21,7 +31,7 @@ export const projects = [
     },
     {
         title: (
-            <LinkPreview url="https://github.com/Lena05k/frontend-project-11" className="text-zinc-100">
+            <LinkPreview url="https://github.com/Lena05k/frontend-project-11">
                 RSS aggregator
             </LinkPreview>
         ),
@@ -31,7 +41,7 @@ export const projects = [
     },
     {
         title: (
-            <LinkPreview url="https://chateau-app.vercel.app/" className="text-zinc-100">
+            <LinkPreview url="https://chateau-app.vercel.app/">
                 WEB Chateau App
             </LinkPreview>
         ),
@@ -41,7 +51,7 @@ export const projects = [
     },
     {
         title: (
-            <LinkPreview url="https://github.com/Lena05k/camera-application" className="text-zinc-100">
+            <LinkPreview url="https://github.com/Lena05k/camera-application">
                 Camera-application
             </LinkPreview>
         ),

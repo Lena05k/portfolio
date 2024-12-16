@@ -103,7 +103,7 @@ export const ModalBody = ({
                     <motion.div
                         ref={modalRef}
                         className={cn(
-                            "min-h-[50%] max-h-[90%] md:max-w-[80%] dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+                            "min-h-[50%] max-h-[90%] md:max-w-[60%] dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
                             className
                         )}
                         initial={{
@@ -194,7 +194,9 @@ export const CloseIcon = () => {
     return (
         <button
             onClick={() => setOpen(false)}
-            className="px-4 py-1 rounded-lg border border-gray-500 text-gray-300">
+            className="px-4 py-1 rounded-lg border border-gray-500 text-gray-300
+            sm:text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl
+            ">
             Cancel
         </button>
     )

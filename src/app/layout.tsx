@@ -1,4 +1,7 @@
 import './globals.css';
+import Header from "@/app/(components)/Header";
+import React from "react";
+import Footer from "@/app/(components)/Footer";
 
 export const metadata = {
     title: "Elena's Portfolio",
@@ -7,11 +10,13 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className="h-full">
-        <body className="overflow-x-hidden">
-            <main className='bg-black text-white'>
+        <html lang="en">
+        <body className="m-0 block bg-white dark:bg-black">
+            <Header/>
+            <main className='w-full relative bg-white dark:bg-black text-white'>
                 {children}
             </main>
+            <Footer />
         </body>
         </html>
     );

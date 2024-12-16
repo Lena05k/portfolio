@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-[#c9d1d9] py-8">
+        <footer className="bg-white dark:bg-black  text-[#c9d1d9] py-8">
             <div className="container mx-auto">
                 <div className="flex flex-wrap justify-between items-center">
                     <p className="text-sm">
