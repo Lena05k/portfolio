@@ -1,22 +1,22 @@
 /* Общий стиль скроллбара */
 ::-webkit-scrollbar {
-    width: 8px; /* Тонкий скроллбар */
-    height: 8px; /* Тонкий горизонтальный скроллбар */
+    width: 8px;
+    height: 8px;
     background-color: black;
 }
 
 /* Ползунок (thumb) скроллбара */
 ::-webkit-scrollbar-thumb {
-    background-color: #3c4048; /* Темный, ненавязчивый цвет ползунка, как на GitHub */
-    border-radius: 4px; /* Закругленные углы, чтобы выглядело аккуратно */
+    background-color: #3c4048;
+    border-radius: 4px;
 }
 
 /* При наведении на ползунок */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #525960; /* Цвет немного светлее при наведении для лучшего взаимодействия */
+    background-color: #525960;
 }
 
 /* Трек (фон) скроллбара */
 ::-webkit-scrollbar-track {
-    background-color: transparent; /* Прозрачный трек, чтобы не выделялся на темном фоне */
+    background-color: transparent;
 }
