@@ -28,10 +28,10 @@ export const AnimatedModalDemo: React.FC<AnimatedModalDemoProps> = ({ item }) =>
                 </ModalTrigger>
                 <ModalBody className="relative mx-auto bg-white dark:bg-black border border-gray-800 dark:border-neutral-800 md:rounded-lg z-50">
                 <ModalContent className="p-4 mx-auto md:p-6 space-y-6">
-                        <h4 className="sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-zinc-400 dark:text-neutral-100 font-bold text-center mb-6">
+                        <h4 className="text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-zinc-400 dark:text-neutral-100 font-bold text-center mb-6">
                             {item.name}
                         </h4>
-                        <p className="text-zinc-400 dark:text-neutral-300 sm:text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed">
+                        <p className="text-zinc-400 dark:text-neutral-300 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl leading-relaxed">
                             {item.content}
                         </p>
                     </ModalContent>

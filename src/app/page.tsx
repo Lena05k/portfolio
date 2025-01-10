@@ -2,7 +2,6 @@
 
 import React from 'react';
 import './scrollbar.css';
-import TrustBrand from "@/app/(components)/TrustBrand";
 import { TimelineDemo } from "@/app/(components)/TimelineDemo";
 import { CardProjectso } from "@/app/(components)/CardProjects";
 import About from "@/app/(components)/About";
@@ -13,9 +12,8 @@ const index = () => {
         <>
             <MainSection />
             <About />
-            <TrustBrand/>
-            <CardProjectso/>
             <TimelineDemo/>
+            <CardProjectso/>
         </>
     );
 }

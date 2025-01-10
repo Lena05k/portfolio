@@ -3,7 +3,7 @@ import { LinkPreview } from "./ui/link-preview";
 
 export const CardProjectso = () => {
     return (
-        <section id="projects" className='visible w-full relative rounded-2xl'>
+        <section id="projects" className='w-full sm:h-screen overflow-hidden relative flex justify-center items-center rounded-2xl'>
             <HoverEffect items={projects} />
         </section>
     );
@@ -16,12 +16,13 @@ export const projects = [
             </LinkPreview>
         ),
         description:
-            "Система  для планирования, управления, мониторинга, анализа и ревью тестирования ПО. Позволяет создавать и хранить тест-кейсы, отслеживать их выполнение, фиксировать дефекты и генерировать отчёты. Основные преимущества — автоматизация рутинных задач, повышение качества продукта и улучшение командного взаимодействия. Интегрируется с системами CI/CD и баг-трекерами для единого рабочего процесса.",
+            "Система  для планирования, управления, мониторинга, анализа и ревью тестирования ПО. Позволяет создавать и хранить тест-кейсы, отслеживать их выполнение, фиксировать дефекты и генерировать отчёты." +
+            " Основные преимущества — автоматизация рутинных задач, повышение качества продукта и улучшение командного взаимодействия. Интегрируется с системами CI/CD и баг-трекерами для единого рабочего процесса.",
         link: "https://github.com/Lena05k/frontend-project-12",
     },
     {
         title: (
-            <LinkPreview url="https://github.com/Lena05k/frontend-project-12">
+            <LinkPreview url="https://chat-vy44.onrender.com/login">
                 Slack chat Demo
             </LinkPreview>
         ),
@@ -31,12 +32,13 @@ export const projects = [
     },
     {
         title: (
-            <LinkPreview url="https://github.com/Lena05k/frontend-project-11">
+            <LinkPreview url="https://frontend-project-11-phi.vercel.app/">
                 RSS aggregator
             </LinkPreview>
         ),
         description:
-            "Агрегатор RSS собирает обновления с различных сайтов, предоставляющих RSS-ленты, и позволяет пользователям централизованно следить за новостями. Реализованы сбор RSS-лент, отслеживание новых постов, асинхронные запросы с использованием axios и стилизация с Bootstrap.",
+            "Агрегатор RSS собирает обновления с различных сайтов, предоставляющих RSS-ленты, и позволяет пользователям централизованно следить за новостями. Реализованы сбор RSS-лент," +
+            " отслеживание новых постов, асинхронные запросы с использованием axios и стилизация с Bootstrap.",
         link: "https://github.com/Lena05k/frontend-project-11",
     },
     {

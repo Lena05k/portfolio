@@ -15,6 +15,7 @@ export default {
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+        blink: 'blink 1s infinite',
       },
       keyframes: {
         meteor: {
@@ -24,6 +25,10 @@ export default {
             transform: "rotate(215deg) translateX(-500px)",
             opacity: "0",
           },
+        },
+        blink: {
+          '0%, 100%': { opacity: '0' }, // В начале и конце цикла — выключено
+          '50%': { opacity: '1' }, // В середине цикла — включено
         },
       },
     },

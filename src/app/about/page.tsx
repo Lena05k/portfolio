@@ -1,6 +1,6 @@
 import React from 'react';
 import {FloatingDockDemo} from "@/app/(components)/FloatingDockDemo";
-import {Sparkles} from "@/app/(components)/sparkles";
+import {SparklesTwo} from "@/app/(components)/ui/sparklesTwo";
 import FactCards from "@/app/about/(components)/FactCards";
 
 const About: React.FC = () => {
@@ -15,7 +15,7 @@ const About: React.FC = () => {
                 </article>
                 <div
                     className='absolute inset-0 bottom-0 z-10 lg:h-[400px] w-full overflow-hidden [mask-image:radial-gradient(100%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute'>
-                    <Sparkles
+                    <SparklesTwo
                         density={1800}
                         speed={1.2}
                         color='#48b6ff'

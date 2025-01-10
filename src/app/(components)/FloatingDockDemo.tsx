@@ -38,5 +38,4 @@ export function FloatingDockDemo() {
                 items={links}
             />
         </div>
-    );
-}
+    );}
