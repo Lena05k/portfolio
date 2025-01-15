@@ -43,7 +43,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="w-full bg-white dark:bg-black font-sans"
             ref={containerRef}
         >
-            <div className="mx-auto relative mt-4 top-0 bottom-0 left-0 right-0 justify-center items-center overflow-hidden pr-4 lg:pr-10 xl:pr-16 2xl:pr-20">
+            <div className="mx-auto relative mt-4
+            top-0 bottom-0 left-0 right-0 justify-center items-center overflow-hidden pr-4 lg:pr-10 xl:pr-16 2xl:pr-20">
                 <div className='mx-auto pb-4 max-w-2xl relative z-10 text-center'>
                     <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold
                     bg-gradient-to-b from-blue-400 to-blue-600 dark:from-[#edeffd] dark:to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter'>

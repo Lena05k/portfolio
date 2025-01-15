@@ -1,8 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import { FaGithub, FaFile, FaArrowUp } from "react-icons/fa";
 import { BsLinkedin, BsTelegram} from "react-icons/bs";
 
 interface Link {
+    id: number;
     icon: JSX.Element;
     href: string;
     label: string;
@@ -10,30 +12,10 @@ interface Link {
 }
 
 const links: Link[] = [
-    {
-        icon: <FaGithub />,
-        href: "https://github.com/Lena05k",
-        label: "Go to GitHub profile",
-        text: "Github"
-    },
-    {
-        icon: <BsLinkedin />,
-        href: "https://www.linkedin.com/in/elena-krupoderova/",
-        label: "Go to Linkedin profile",
-        text: "Linkedin"
-    },
-    {
-        icon: <BsTelegram />,
-        href: "https://t.me/krupoderova",
-        label: "Go to Telegram profile",
-        text: "Telegram"
-    },
-    {
-        icon: <FaFile />,
-        href: "#",
-        label: "Go to Resume",
-        text: "Резюме"
-    }
+    { id: 1, icon: <FaGithub />, href: "https://github.com/Lena05k", label: "Go to GitHub profile", text: "Github" },
+    { id: 2, icon: <BsLinkedin />, href: "https://www.linkedin.com/in/elena-krupoderova/", label: "Go to Linkedin profile", text: "Linkedin" },
+    { id: 3, icon: <BsTelegram />, href: "https://t.me/krupoderova", label: "Go to Telegram profile", text: "Telegram" },
+    { id: 4, icon: <FaFile />, href: "#", label: "Go to Resume", text: "Резюме" }
 ];
 
 interface LinkWithIconProps {
@@ -46,7 +28,7 @@ interface LinkWithIconProps {
 const LinkWithIcon: React.FC<LinkWithIconProps> = ({ icon, href, label, text }) => (
     <div className="flex flex-row gap-1 items-center">
         {icon}
-        <a
+        <Link
             href={href}
             aria-label={label}
             className="relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px]
@@ -55,7 +37,7 @@ const LinkWithIcon: React.FC<LinkWithIconProps> = ({ icon, href, label, text }) 
             rel="noopener"
         >
             {text}
-        </a>
+        </Link>
     </div>
 );
 
@@ -79,11 +61,11 @@ const Footer = () => {
                 <div
                     className="self-stretch flex-none h-auto overflow-hidden relative lg:w-[10%] xl:w-[11%] 2xl:w-[12%]"></div>
                 <div
-                    className="flex flex-col flex-nowrap flex-1 items-start content-start justify-start gap-[18px] lg:gap-[54px] 2xl:gap-[76px] h-full relative p-0">
+                    className="flex flex-col flex-nowrap flex-1 items-start content-start justify-start gap-[18px] lg:gap-[54px] 2xl:gap-[76px] relative p-0">
                     <div
                         className="flex flex-row flex-nowrap items-center content-center justify-center gap-0 h-min w-full relative overflow-visible">
                         <div className="flex-1 relative whitespace-pre-wrap break-words">
-                            <p className="text-2xl lg:text-[34px] xl:text-[52px] 2xl:text-[64px] font-bold text-black dark:text-white">НУЖЕН ФРОНТЕНД-РАЗРАБОТЧИК?</p>
+                            <p className="text-2xl lg:text-[34px] xl:text-[45px] 2xl:text-[64px] font-bold text-black dark:text-white">НУЖЕН ФРОНТЕНД-РАЗРАБОТЧИК?</p>
                         </div>
                     </div>
                     <div
@@ -97,19 +79,19 @@ const Footer = () => {
                             </div>
                         </div>
                         <div
-                            className="flex flex-row flex-nowrap items-end content-end justify-start gap-0 h-[48px] w-full relative overflow-hidden p-0">
+                            className="flex flex-col sm:flex-row flex-nowrap sm:items-end sm:content-end justify-start gap-0 h-[48px] w-full relative p-0">
                             <div
-                                className="flex flex-row flex-nowrap items-center content-center justify-start gap-6 h-min w-[90%] relative overflow-hidden p-0
-                                 text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-black dark:text-white">
-                                {links.map((link, index) => (
-                                    <LinkWithIcon key={index} {...link} />
+                                className="flex flex-row flex-nowrap items-center content-center justify-start gap-3 sm:gap-6 h-min w-[90%] relative p-0
+                                 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-black dark:text-white">
+                                {links.map((link) => (
+                                    <LinkWithIcon key={link.id} {...link} />
                                 ))}
                             </div>
                             <div className="opacity-0 lg:opacity-100 flex items-center justify-center aspect-square flex-none h-[40px] xl:h-[44px] 2xl:h-[48px] w-[40px] xl:w-[44px] 2xl:w-[48px] relative
                                     border border-gray-300 hover:border-blue-400 rounded-lg bg-white transition duration-300 ease-in-out">
-                                <a href="./#home">
+                                <Link href="./#home">
                                     <FaArrowUp className="h-5 w-5 fill-current text-black"/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -128,7 +110,7 @@ const Footer = () => {
                     </h1>
                 </div>
                 <div
-                    className="flex flex-row flex-nowrap items-start content-start justify-start gap-0 h-[22px] w-full relative overflow-visible lg:pl-10">
+                    className="flex flex-col sm:flex-row flex-nowrap items-start content-start justify-start gap-0 h-[22px] w-full relative overflow-visible lg:pl-10">
                     <div
                         className="flex-none h-full opacity-0 lg:opacity-1 lg:w-[198px] xl:w-[265px] 2xl:w-[377px] overflow-hidden relative"></div>
                     <div

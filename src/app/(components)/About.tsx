@@ -5,10 +5,10 @@ const About = () => {
 
     return (
         <section id="about"
-                 className="w-full my-10 p-4 sm:p-4 lg:p-20 relative flex flex-none flex-col gap-7 justify-start overflow-hidden pointer-events-auto">
+                 className="w-full my-10 p-4 sm:p-4 lg:p-20 relative flex flex-none flex-col gap-7 justify-start pointer-events-auto">
             <div className="flex flex-none flex-col lg:flex-row flex-nowrap justify-start items-start content-start gap-6 lg:gap-0 ">
                 <div
-                    className="flex flex-none flex-row lg:flex-col flex-nowrap items-end justify-between content-end lg:items-start lg:justify-start lg:content-start gap-10 h-min lg:max-w-[200px] xl:max-w-[300px] 2xl:max-w-[382px] overflow-visible py-4 sm:py-4 lg:p-0 sticky  will-change-transform">
+                    className="flex flex-none flex-row lg:flex-col flex-nowrap items-end justify-between content-end lg:items-start lg:justify-start lg:content-start gap-5 md:gap-10 h-min lg:max-w-[200px] xl:max-w-[300px] 2xl:max-w-[382px] overflow-visible py-4 sm:py-4 lg:p-0 sticky  will-change-transform">
                     <div
                         className="flex flex-none flex-col flex-nowrap items-start justify-start content-start self-stretch gap-3 lg:gap-5 w-[155px] h-min overflow-visible p-0 relative lg:w-auto">
                         <h4 className="text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl font-bold text-black dark:text-white">Услуги</h4>
@@ -21,7 +21,7 @@ const About = () => {
                         <BsLightningCharge
                             className="text-black dark:text-white font-bold text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl mr-3"/>
                         <a href="./#work"
-                           className="text-base sm:text-sm md:text-md lg:text-md xl:text-xl 2xl:text-2xl font-bold text-black dark:text-white">Смотреть
+                           className="text-[12px] sm:text-sm md:text-md lg:text-md xl:text-xl 2xl:text-2xl font-bold text-black dark:text-white">Смотреть
                             работу</a>
                     </div>
                 </div>

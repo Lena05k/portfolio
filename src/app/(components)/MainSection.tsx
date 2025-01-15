@@ -4,7 +4,7 @@ import React from "react";
 
 const MainSection = () => {
     return (
-        <section id="home" className='w-full relative rounded-[5rem] shadow-xl shadow-blue-500/50 overflow-hidden'>
+        <section id="home" className='relative rounded-[5rem] shadow-xl shadow-blue-500/50 overflow-hidden'>
             <div
                 className="mx-auto flex
                 h-[52vh] md:h-[62vh] lg:h-[72vh] xl:h-[82vh] 2xl:h-[92vh]
@@ -37,9 +37,7 @@ const MainSection = () => {
                 <img
                     src="/images/whilePortait.png"
                     alt="Портрет"
-                    className="animated-portrait absolute bottom-0 z-30
-                    h-[28rem] w-[32rem] md:h-[35rem] md:w-[40rem] lg:h-[48rem] lg:w-[55rem] xl:h-[58rem] xl:w-[65rem] 2xl:h-[68rem] 2xl:w-[75rem]
-                     object-cover self-start"
+                    className="animated-portrait absolute bottom-0 z-30 h-full object-cover self-start"
                 />
                 <div
                     className='absolute inset-0 bottom-0 z-20 w-full overflow-hidden [mask-image:radial-gradient(100%_50%,white,transparent)]

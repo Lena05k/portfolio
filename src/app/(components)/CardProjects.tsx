@@ -3,13 +3,14 @@ import { LinkPreview } from "./ui/link-preview";
 
 export const CardProjectso = () => {
     return (
-        <section id="projects" className='w-full sm:h-screen overflow-hidden relative flex justify-center items-center rounded-2xl'>
+        <section id="projects" className='w-full relative'>
             <HoverEffect items={projects} />
         </section>
     );
 }
 export const projects = [
     {
+        id: 1,
         title: (
             <LinkPreview url="#">
                 TMS (Test Management System)
@@ -21,6 +22,7 @@ export const projects = [
         link: "https://github.com/Lena05k/frontend-project-12",
     },
     {
+        id: 2,
         title: (
             <LinkPreview url="https://chat-vy44.onrender.com/login">
                 Slack chat Demo
@@ -31,6 +33,7 @@ export const projects = [
         link: "https://github.com/Lena05k/frontend-project-12",
     },
     {
+        id: 3,
         title: (
             <LinkPreview url="https://frontend-project-11-phi.vercel.app/">
                 RSS aggregator
@@ -42,6 +45,7 @@ export const projects = [
         link: "https://github.com/Lena05k/frontend-project-11",
     },
     {
+        id: 4,
         title: (
             <LinkPreview url="https://chateau-app.vercel.app/">
                 WEB Chateau App
@@ -52,6 +56,7 @@ export const projects = [
         link: "https://github.com/Lena05k/Web-Chateau-App",
     },
     {
+        id: 5,
         title: (
             <LinkPreview url="https://github.com/Lena05k/camera-application">
                 Camera-application

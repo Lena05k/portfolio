@@ -1,15 +1,17 @@
 "use client";
 
-import {cn} from "../../lib/utils";
-import {AnimatePresence, motion} from "framer-motion";
+import React, {useState} from "react";
 import Link from "next/link";
-import {useState} from "react";
+import { cn } from "../../lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { SparklesTwo } from "@/app/(components)/ui/sparklesTwo";
 
 export const HoverEffect = ({
                                 items,
                                 className,
                             }: {
     items: {
+        id: number;
         title: string | JSX.Element;
         description: string;
         link: string;
@@ -20,17 +22,35 @@ export const HoverEffect = ({
 
     return (
         <div
-            className="mx-auto relative top-0 bottom-0 left-0 right-0 flex justify-center items-center mt-16 sm:mt-0 px-4 lg:px-10 xl:px-16 2xl:px-20">
+            className="mx-auto relative overflow-hidden
+            top-0 bottom-0 left-0 right-0 justify-center items-center pb-20
+            mt-16 px-4 lg:px-10 xl:px-16 2xl:px-20">
+            <div className='mx-auto pb-4 max-w-2xl relative z-10 text-center'>
+                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold
+                    bg-gradient-to-b from-blue-400 to-blue-600 dark:from-[#edeffd] dark:to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter'>
+                    Опыт работы
+                </h1>
+            </div>
+            <div className='relative h-16 lg:h-40 overflow-hidden '>
+                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-[#48b6ff] to-transparent h-[2px] w-2/4 mx-auto blur-sm"/>
+                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-[#48b6ff] to-transparent h-px w-2/4 mx-auto"/>
+                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-[#48b6ff] to-transparent h-px w-1/4 mx-auto"/>
+                <SparklesTwo
+                    density={1200}
+                    mousemove={true}
+                    color='#48b6ff'
+                    className='absolute inset-x-0 -mt-4 lg:-mt-12 top-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_55%)]'
+                />
+            </div>
             <div
                 className={cn(
-                    "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+                    "relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
                     className
                 )}
             >
                 {items.map((item, idx) => (
-                    <Link
-                        href={item?.link}
-                        key={item?.link}
+                    <div
+                        key={item?.id}
                         className="relative group block p-2 h-full w-full"
                         onMouseEnter={() => setHoveredIndex(idx)}
                         onMouseLeave={() => setHoveredIndex(null)}
@@ -56,7 +76,7 @@ export const HoverEffect = ({
                             <CardTitle>{item.title}</CardTitle>
                             <CardDescription>{item.description}</CardDescription>
                         </Card>
-                    </Link>
+                    </div>
                 ))}
             </div>
         </div>

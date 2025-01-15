@@ -1,10 +1,19 @@
 "use client";
 
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { LuSun } from "react-icons/lu";
 import { BsLightningCharge, BsEmojiLaughing, BsFillLayersFill, BsSend,
     BsChatSquareHeart, BsLinkedin, BsGithub, BsTelegram } from "react-icons/bs";
+
 interface NavLink {
+    id: number;
+    icon: JSX.Element;
+    href: string;
+    label: string;
+}
+
+interface IconButtonProps {
     icon: JSX.Element;
     href: string;
     label: string;
@@ -12,26 +21,31 @@ interface NavLink {
 
 const navLinksCenter: NavLink[] = [
     {
+        id: 1,
         icon: <BsEmojiLaughing className="text-black text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl" />,
         href: "./#home",
         label: "Go to home section"
     },
     {
+        id: 2,
         icon: <BsChatSquareHeart className="text-black text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl" />,
         href: "./#about",
         label: "Go to about section"
     },
     {
+        id: 3,
         icon: <BsLightningCharge className="text-black text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl" />,
         href: "./#work",
         label: "Go to work section"
     },
     {
+        id: 4,
         icon: <BsFillLayersFill className="text-black text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl" />,
         href: "./#projects",
         label: "Go to projects section"
     },
     {
+        id: 5,
         icon: <BsSend className="text-black text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl" />,
         href: "./#contact",
         label: "Go to contact section"
@@ -40,27 +54,24 @@ const navLinksCenter: NavLink[] = [
 
 const navLinksRight: NavLink[] = [
     {
+        id: 1,
         icon: <BsLinkedin className="text-black text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl" />,
         href: "https://www.linkedin.com/in/elena-krupoderova/",
         label: "Go to Linkedin profile"
     },
     {
+        id: 2,
         icon: <BsGithub className="text-black text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl" />,
         href: "https://github.com/Lena05k",
         label: "Go to GitHub profile"
     },
     {
+        id: 3,
         icon: <BsTelegram className="text-black text-base sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl" />,
         href: "https://t.me/krupoderova",
         label: "Go to Telegram profile"
     }
 ];
-
-interface IconButtonProps {
-    icon: JSX.Element;
-    href: string;
-    label: string;
-}
 
 const IconButtonCenter: React.FC<IconButtonProps> = ({ icon, href, label }) => (
     <div className="aspect-square flex-none h-[40px] xl:h-[44px] 2xl:h-[48px] w-[40px] xl:w-[44px] 2xl:w-[48px] relative">
@@ -78,14 +89,14 @@ const IconButtonCenter: React.FC<IconButtonProps> = ({ icon, href, label }) => (
 const IconButtonRight: React.FC<IconButtonProps> = ({ icon, href, label }) => (
     <div className="flex items-center justify-center aspect-square flex-none h-[40px] xl:h-[44px] 2xl:h-[48px] w-[40px] xl:w-[44px] 2xl:w-[48px] relative
                         border border-gray-300 hover:border-blue-400 rounded-lg bg-white transition duration-300 ease-in-out">
-        <a
+        <Link
             href={href}
             aria-label={label}
             target="_blank"
             rel="noopener"
         >
             {icon}
-        </a>
+        </Link>
     </div>
 );
 
@@ -130,8 +141,8 @@ const Header = () => {
                         className="flex flex-nowrap flex-col backdrop-blur-md bg-gray-100/50 dark:bg-gray-900/30 rounded-lg p-4 z-10"
                     >
                         <main aria-label="Navigation buttons"  className="flex flex-row flex-nowrap justify-center items-center gap-3 xl:gap-4 h-min w-min overflow-visible p-0 relative z-10">
-                            {navLinksCenter.map((navLink, index) => (
-                                <IconButtonCenter key={index} {...navLink} />
+                            {navLinksCenter.map((navLink) => (
+                                <IconButtonCenter key={navLink.id} {...navLink} />
                             ))}
                         </main>
                         <figure className="absolute bottom-0 left-[26px] flex-none h-[4px] w-[28px] overflow-visible z-10 bg-[#3273ff] dark:bg-[#48b6ff]"></figure>
@@ -141,10 +152,10 @@ const Header = () => {
             <header className="opacity-0 lg:opacity-100 relative top-0 left-1/2 transform -translate-x-1/2 flex flex-row flex-nowrap justify-center items-center
             gap-0 w-full h-min px-10 py-9 bg-white dark:bg-black backdrop-blur-sm z-40" >
                 <button
-                    className="flex flex-col flex-nowrap justify-start items-start flex-[1_0_0] gap-0 h-min w-px overflow-hidden relative p-0 z-10"
+                    className="flex flex-col flex-nowrap justify-start items-start flex-[1_0_0] gap-0 h-min w-px relative p-0 z-10"
                     name="Logo"
                 >
-                    <a
+                    <Link
                         href="http://www.oriol.design"
                         aria-label="Go to homepage"
                         className="flex items-center"
@@ -155,12 +166,12 @@ const Header = () => {
                             aria-label="Oriol.design logotype"
                         >
                         </div>
-                    </a>
+                    </Link>
                 </button>
                 <main className="flex flex-col flex-nowrap justify-end items-end flex-[1_0_0] gap-0 h-min w-px overflow-hidden relative p-0 z-30">
                     <div className="flex flex-row flex-nowrap justify-center items-center gap-3 xl:gap-4 h-min w-min overflow-hidden relative p-0">
-                        {navLinksRight.map((navLink, index) => (
-                            <IconButtonRight key={index} {...navLink} />
+                        {navLinksRight.map((navLink) => (
+                            <IconButtonRight key={navLink.id} {...navLink} />
                         ))}
                         <div className="flex items-center justify-center aspect-square flex-none h-[40px] xl:h-[44px] 2xl:h-[48px] w-[40px] xl:w-[44px] 2xl:w-[48px] relative">
                             <button
